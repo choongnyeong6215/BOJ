@@ -1,0 +1,17 @@
+const input = require("fs")
+  .readFileSync("/dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+const t = Number(input[0]);
+
+for (let i = 1; i <= t; i++) {
+  const curLine = input[i].split(" ");
+
+  console.log(
+    `Case #${i}: ${Number(curLine[0])} + ${Number(curLine[1])} = ${
+      Number(curLine[0]) + Number(curLine[1])
+    }`
+  );
+}
